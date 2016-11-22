@@ -1,0 +1,66 @@
+.login--header, .home--header {
+    text-align: center;
+}
+
+.login--header h1 {
+    margin-top: 50px;
+}
+
+.login--form {
+    text-align: center;
+}
+
+.login--form form {
+    margin-top: 50px;
+}
+
+
+.home--description {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home--photo {
+    margin-bottom: 30px;
+}
+
+.home--photo img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.home--message {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.home--message.error {
+    display: block;
+    background: #f2dede;
+    color: #843534;
+}
+
+.home--message.success {
+    display: block;
+    background: #dff0d8;
+    color: #2b542c;
+}
+
+.home--part--title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.home--form--title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+}
