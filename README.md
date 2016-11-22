@@ -1,5 +1,4 @@
 #Event Club
-=================
 Your event page with some features:
 - Limited access with password
 - Google Sheets edition (append row at each booking)
@@ -8,6 +7,7 @@ Your event page with some features:
 You only need to add some style.
 
 ------- FRENCH -------
+
 Votre page évenement avec
 - Protection par mot de passe
 - Édition d'un Google Sheets (ajout d'une ligne à chaque réservation)
