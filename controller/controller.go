@@ -85,6 +85,25 @@ func BookingHandler(w http.ResponseWriter, r *http.Request) {
 	tpl := "home"
 	data := model.Response{Booking: model.Booking{}, MealPrice: MealPrice, StripeKey: conf.Stripe.Public_Key}
 
+	userPasswordHash := ""
+
+	//Get user password from cookie
+	if ck, ok := r.Cookie("key"); len(userPasswordHash) == 0 && ok == nil {
+		userPasswordHash, _ = url.QueryUnescape(ck.Value)
+	}
+
+	//Init passHash at first occurence
+	if len(passwordHash) == 0 {
+		h := sha1.New()
+		h.Write([]byte(conf.Password))
+		passwordHash = string(h.Sum(nil))
+	}
+
+	if passwordHash != userPasswordHash {
+		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+		return
+	}
+
 	r.ParseForm()
 
 	data.Booking.Name = r.Form.Get("name")
