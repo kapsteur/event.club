@@ -35,6 +35,5 @@ export EVENT_EMAIL_PASSWORD=
 export EVENT_SHEET_ID=
 ```
 
-Generate a `client_secret.json` (like `client_secret.sample.json`) more infos : https://developers.google.com/identity/protocols/OAuth2WebServer.
-
+Generating a service account credential : `client_secret.json` (like `client_secret.sample.json`) more infos : https://cloud.google.com/storage/docs/authentication#service_accounts.
 
